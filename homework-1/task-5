@@ -1,0 +1,6 @@
+// task-5 use while
+var i;
+while (i<3) {
+  console.log(i);
+  i++;
+}

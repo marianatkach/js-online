@@ -1,0 +1,26 @@
+// task - 5
+
+var arr = [1, 2, -4, 3, -9, -1, 7];
+var arr_new = [];
+
+for (var i = 0; i < arr.length; i++){
+  if (isPositive(i) === true){
+    arr_new.push(i);
+  }
+}
+
+function isPositive(i){
+  if (typeof i !== 'number'){
+    console.log('This is string, not number');
+  }
+  else if (i > 0){
+    return true;
+  }
+  else if (i < 0){
+    return false;
+  }
+}
+
+for (i of arr_new){
+  console.log(i);
+}

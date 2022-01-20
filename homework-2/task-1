@@ -1,0 +1,12 @@
+// task - 1
+
+function cube(numb){
+  if (typeof numb == 'number'){
+    var result = numb * numb * numb;
+    console.log(result);
+  }
+  else{
+    console.log('This is other type');
+  }
+}
+cube(5);

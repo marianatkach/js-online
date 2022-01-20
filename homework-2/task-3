@@ -1,0 +1,13 @@
+// task - 3
+
+function f(a, b, c) {
+  if (typeof a !== 'number' ||  typeof b !== 'number' || typeof c !== 'number'){
+    console.log('Error');
+  }
+  else{
+    var num = a-b/c;
+    console.log(num);
+  }
+}
+
+f(9,3,2);

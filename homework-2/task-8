@@ -1,0 +1,12 @@
+function f(arr){
+  if (arr !== []){
+    console.log(arr.shift());
+    if (arr.length !== 0){
+      f(arr);
+      }
+  }
+  else{
+    console.log('Empty array');
+    }
+}
+f([1,2,3])

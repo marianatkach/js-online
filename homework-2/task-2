@@ -1,0 +1,13 @@
+// task - 2
+
+function f(n) {
+  for (var i = 0; i < n.length; i++){
+    if (typeof i === 'number'){
+      var sum = sum + n[i];
+      console.log(sum);}
+    else{
+      console.log('Error');}
+  }
+}
+
+f([1,2,3,4,5]);

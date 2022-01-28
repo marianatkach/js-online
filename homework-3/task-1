@@ -1,0 +1,19 @@
+// task - 1
+
+var arr = [1, 2, 3];
+
+function each(arr, callback) {
+  if (typeof callback == 'function' && Array.isArray(arr) == true){
+    var i, length = arr.length;
+    for (i = 0; i < length; i = i + 1) {
+      callback(arr[i], i, arr);
+    }
+  }
+  else{
+    console.log('Error! Check parametrs')
+  }
+};
+
+each(arr, function(num, i, nums) {
+  console.log('Number: ' + num + ', index: ' + i + ',', nums)
+});

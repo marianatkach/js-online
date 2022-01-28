@@ -1,0 +1,18 @@
+// task - 10
+
+var array = []
+
+function reverse(array) {
+  if (Array.isArray(array) == true && array.length !== 0){
+    var output = [];
+    while (array.length) {
+      output.push(array.pop());
+    }
+    return output;
+  }
+  else{
+    console.log('Array is Empty')
+  }
+}
+
+console.log(reverse(array));

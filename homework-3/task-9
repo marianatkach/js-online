@@ -1,0 +1,13 @@
+//task - 9
+
+function arrayFill(value, length) {
+  if ((typeof value == 'string' || typeof value === 'number' || typeof Array.isArray(arr) == true || typeof value === 'object') && typeof length == 'number'){
+    var arr = [];
+  	for (var i = 0; i < length; i++) {
+  		arr.push(value);
+  	}
+  	return arr;
+    }
+};
+
+console.log(arrayFill('x', 5));

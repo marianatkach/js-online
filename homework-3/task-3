@@ -1,0 +1,22 @@
+var arr = [1, 2, 3, 4, 5, 6]
+
+function every(arr, callback) {
+  if (typeof callback == 'function' && Array.isArray(arr) == true){
+    var i, length = arr.length;
+    for (i = 0; i < length; i = i + 1) {
+      if (!callback.call(arr[i], i, arr)) {
+        return false;
+      }
+    }
+  return true;
+  }
+  else{
+    console.log('Error! Check your parametrs');
+  }
+};
+
+var result = every(arr, function(item, i, arr) {
+  return item > 3;
+});
+
+console.log(result);

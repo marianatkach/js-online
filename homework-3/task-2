@@ -1,0 +1,20 @@
+var arr = [1, -4, -6, 5, 7]
+
+function filter(arr, callback) {
+  if (typeof callback == 'function' && Array.isArray(arr) == true){
+    var i, length = arr.length, results = [];
+    for (i = 0; i < length; i = i + 1) {
+      if (callback.call(arr[i], i, arr)) {
+        results.push(arr[i]);
+      }
+    }
+  }
+  else {
+    console.log('Error! Check your parametrs');
+  }
+  console.log(results);
+};
+
+filter(arr, function(num, i, nums) {
+  return num>1
+});

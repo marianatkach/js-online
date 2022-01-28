@@ -1,0 +1,9 @@
+// task - 7
+
+var arr = ['abcd', 'abcde', 'ab', 'abc'];
+
+var LengthsElem = arr.map(function(i) {
+  return i.length;
+});
+
+console.log( LengthsElem );

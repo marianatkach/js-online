@@ -1,0 +1,24 @@
+// task - 4
+
+var arr = [1, 2, 3, 4, 5, 6]
+
+function some(arr, callback) {
+  if (typeof callback == 'function' && Array.isArray(arr) == true){
+  var i, length = arr.length;
+  for (i = 0; i < length; i = i + 1) {
+    if (callback.call(arr[i], i, arr)) {
+      return true;
+    }
+  }
+  return false;
+  }
+  else{
+    console.log('Error! Check Arguments')
+  }
+};
+
+var result = some(arr, function(item, i, arr) {
+  return item > 3;
+});
+
+console.log(result)

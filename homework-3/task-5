@@ -1,18 +1,22 @@
 // task - 5
 // не понимаю почему не работает
+
 var arr = [1,2,3,4,5];
 var acc = 0;
 
-function reduce(arr, callback) {
-  var reduce = function(arr, callback, acc) {
-  var i, length = arr.length, result = acc;
-  for (i = 0; i < length; i = i + 1) {
-    result = callback.call(null, result, arr[i], i, arr);
-  }
-  return result;
-  }
+function reduce(arr, callback, acc){
+  if (typeof callback == 'function' && Array.isArray == true && typeof acc == 'number'){
+    var i, length = arr.length, result = acc;
+    for (i = 0; i < length; i = i + 1) {
+      result = callback.call(null, result, arr[i], i, arr);
+    }
+    return result;
+    }
+    else{
+      console.log('Error! Check your parametrs')
+    }
 };
 
-reduce(arr, function(acc, item, i, arr) {
+var final = reduce(arr, function(acc, item, i, arr) {}, acc);
 
-}, acc);
+console.log(final);

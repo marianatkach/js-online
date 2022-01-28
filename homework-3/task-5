@@ -1,0 +1,18 @@
+// task - 5
+// не понимаю почему не работает
+var arr = [1,2,3,4,5];
+var acc = 0;
+
+function reduce(arr, callback) {
+  var reduce = function(arr, callback, acc) {
+  var i, length = arr.length, result = acc;
+  for (i = 0; i < length; i = i + 1) {
+    result = callback.call(null, result, arr[i], i, arr);
+  }
+  return result;
+  }
+};
+
+reduce(arr, function(acc, item, i, arr) {
+
+}, acc);

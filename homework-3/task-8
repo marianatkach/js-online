@@ -1,0 +1,39 @@
+const array = [[[1, 2], [1, 2]], [[2, 1], [1, 2]]];
+const array_1 = [[[[[1,2]]]]];
+const array_2 = [[[[[1,2]]],2],1];
+const array_3 = [[[[[]]]]];
+const array_4 = [[[[[],3]]]];
+
+function func(arr) {
+    if (typeof arguments =='number' && Array.isArray(arr)) {
+        console.log('Error! Check your parametrs');
+    }
+    // метод flat - рекурсивно поднимает элементы на указанный уровень
+    var newArr=arr.flat(Infinity);
+    if (typeof newArr.length===0) {
+        return 0;
+    }
+    var sum, current = 0;
+    var result = newArr.reduce(function(sum, current) {
+        if (typeof sum!=='number' || typeof current!=="number") {
+            console.log('Error! Chech your parametrs')
+        }
+        return sum + current;
+    },0)
+    return result;
+}
+
+var result = func(array);
+console.log('Sum', result);
+
+var result = func(array_1);
+console.log('Sum', result);
+
+var result = func(array_2);
+console.log('Sum', result);
+
+var result = func(array_3);
+console.log('Sum', result);
+
+var result = func(array_4);
+console.log('Sum', result);

@@ -19,3 +19,9 @@ function reduce(arr, callback, acc){
   }
   return count;
 };
+
+
+var final = reduce(arr, function(acc, item, i, arr) {
+  return item => 0;
+}, acc);
+console.log(final);

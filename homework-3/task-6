@@ -1,0 +1,21 @@
+var arr = [1,2,3,4,5];
+var acc = 0;
+
+function reduce(arr, callback, acc){
+  if (typeof callback !== 'function'){
+    console.log('Check your function');
+  }
+  if (!Array.isArray(arr)){
+    console.log('Check your array');
+  }
+  if (typeof acc !== 'number'){
+    console.log('Check your accumulator');
+  }
+  count = 0
+  for (var i=arr.length-1; i>=0; i--) {
+    if(callback.call(acc, arr[i], i, arr)){
+      count=count+arr[i] + acc;
+    }
+  }
+  return count;
+};
